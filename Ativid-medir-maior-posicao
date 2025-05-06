@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class maior_posicao {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int i;
+        int mv = 0;
+        int posi = 0;
+
+        System.out.print("Quanto numeros voce vai digitar? ");
+        int n = sc.nextInt();
+        sc.nextLine();
+
+        int []maior = new int[n];
+
+        for(i = 0; i < n ; i ++){
+            System.out.print("Digite um numero: ");
+            maior[i] = sc.nextInt();
+            sc.nextLine();
+        }
+
+        for(i = 0 ; i < n; i++){
+            if(maior[i] > mv){
+                mv = maior[i];
+                posi = i;
+            }
+        }
+        System.out.println("MAIOR VALOR = " + mv);
+        System.out.println("POSICAO DO MAIOR VALOR = " + posi);
+
+
+
+    }
+}
