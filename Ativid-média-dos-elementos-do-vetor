@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.Locale;
+public class abaixo_da_media {
+    public static void main(String[] args){
+    Locale.setDefault(Locale.US);
+    Scanner sc = new Scanner(System.in);
+
+    double md = 0 ;
+    double res = 0;
+
+    System.out.print("Quantos elementos vai ter o vetor? ");
+    int n = sc.nextInt();
+    sc.nextLine();
+
+    double [] numeros = new double[n];
+    for(int i = 0; i < n ; i++){
+        System.out.print("Digite um numero: ");
+        numeros[i] = sc.nextDouble();
+        sc.nextLine();
+        md += numeros[i];
+    }
+    System.out.println();
+    res = md/n;
+    System.out.println("MEDIA DO VETOR ="+String.format("%.3f",res));
+    System.out.println("ELEMENTOS ABAIXO DA MEDIA:");
+    for(int i = 0; i < n ; i++){
+        if(numeros[i] < res ){
+            System.out.println(numeros[i]);
+        }
+
+    }
+    }
+}
